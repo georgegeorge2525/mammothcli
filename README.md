@@ -22,6 +22,7 @@ $ mammothcli
 
 # Mammoth reads your files, writes the code, runs the tests — all in your terminal.
 
+```
 
 ## ✨ Features
 
