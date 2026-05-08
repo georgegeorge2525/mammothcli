@@ -1,5 +1,4 @@
 
-```markdown
 <div align="center">
   <img src="./mammothbanner.png" alt="Mammoth CLI Banner" width="400" />
 
@@ -23,7 +22,6 @@ $ mammothcli
 
 # Mammoth reads your files, writes the code, runs the tests — all in your terminal.
 
-```
 
 ## ✨ Features
 
