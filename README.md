@@ -157,7 +157,3 @@ Apache 2.0 — see [LICENSE](https://github.com/georgegeorge2525/mammothcli/blob
 ## 🤝 Contributing
 
 See [CONTRIBUTING.md](https://github.com/georgegeorge2525/mammothcli/blob/main/CONTRIBUTING.md). Issues and PRs are welcome!
-
-```
-
-```
