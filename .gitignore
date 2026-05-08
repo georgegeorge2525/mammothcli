@@ -1,0 +1,81 @@
+# ── Bun ──
+bun.lock
+bun.lockb
+
+# ── Dependencies ──
+node_modules/
+
+# ── Build output ──
+dist/
+build/
+*.tsbuildinfo
+
+# ── Environment & secrets ──
+.env
+.env.*
+!.env.example
+
+# ── Mammoth runtime ──
+.mammoth/
+*.db
+*.db-journal
+*.db-wal
+
+# ── OS generated ──
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# ── IDE / Editor ──
+.vscode/
+.idea/
+*.swp
+*.swo
+*.swn
+*~
+\#*\#
+.project
+.classpath
+.settings/
+*.sublime-project
+*.sublime-workspace
+
+# ── Node / TypeScript ──
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+.pnpm-store/
+*.tgz
+.eslintcache
+.cache/
+
+# ── Testing ──
+coverage/
+.nyc_output/
+*.lcov
+
+# ── Temp files ──
+tmp/
+temp/
+*.tmp
+*.temp
+*.bak
+mammoth.txt
+
+# ── External tooling ──
+.omc/
+.terraform/
+*.pyc
+__pycache__/
+
+# ── Misc ──
+*.pem
+*.key
+*.crt
