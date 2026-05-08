@@ -2,9 +2,9 @@
 <div align="center">
   <img src="./mammothbanner.png" alt="Mammoth CLI Banner" width="400" />
 
-  <h1>Mammoth CLI</h1>
+  <h1>Mammoth CLI — Autonomous Coding Agent Framework</h1>
   
-  <p><b>Sovereign AI coding assistant. Runs in your terminal. Works with any LLM provider.</b></p>
+  <p><b>Autonomous coding agent framework. Multi-provider, multi-agent, memory-backed. Runs in your terminal.</b></p>
 
   <img src="https://img.shields.io/badge/Bun-%23000000.svg?style=flat-square&logo=bun&logoColor=white" alt="Bun" />
   <img src="https://img.shields.io/badge/License-Apache%202.0-blue.svg?style=flat-square" alt="License" />
@@ -13,7 +13,7 @@
 
 ---
 
-Mammoth CLI is an interactive terminal UI for AI-assisted software development. It connects to any major LLM provider (DeepSeek, Claude, OpenAI, Groq, Ollama, OpenRouter), gives the model direct filesystem and shell access via tools, and lets you spawn specialized sub-agents for complex multi-step work.
+Mammoth CLI is an **autonomous coding agent framework** — not just a chat interface. It connects to any major LLM provider (DeepSeek, Claude, OpenAI, Groq, Ollama, OpenRouter), gives agents direct filesystem and shell access, and orchestrates specialized sub-agents that work in parallel on complex multi-step tasks. Includes a 4-tier memory system that learns across sessions, a workflow state machine with circuit breaker, and support for autonomous execution modes (Autopilot, Ralph, Ultrawork).
 
 ```bash
 $ mammothcli
