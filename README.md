@@ -1,38 +1,51 @@
-# Mammoth CLI
 
-**Sovereign AI coding assistant. Runs in your terminal. Works with any LLM provider.**
+```markdown
+<div align="center">
+  <img src="./mammothbanner.png" alt="Mammoth CLI Banner" width="400" />
+
+  <h1>Mammoth CLI</h1>
+  
+  <p><b>Sovereign AI coding assistant. Runs in your terminal. Works with any LLM provider.</b></p>
+
+  <img src="https://img.shields.io/badge/Bun-%23000000.svg?style=flat-square&logo=bun&logoColor=white" alt="Bun" />
+  <img src="https://img.shields.io/badge/License-Apache%202.0-blue.svg?style=flat-square" alt="License" />
+  <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square" alt="PRs Welcome" />
+</div>
+
+---
 
 Mammoth CLI is an interactive terminal UI for AI-assisted software development. It connects to any major LLM provider (DeepSeek, Claude, OpenAI, Groq, Ollama, OpenRouter), gives the model direct filesystem and shell access via tools, and lets you spawn specialized sub-agents for complex multi-step work.
 
-```
+```bash
 $ mammothcli
 
 > Write a function that parses ISO 8601 dates with timezone offsets
 
-Mammoth reads your files, writes the code, runs the tests — all in your terminal.
+# Mammoth reads your files, writes the code, runs the tests — all in your terminal.
+
 ```
 
-## Features
+## ✨ Features
 
-- **Multi-provider** — DeepSeek, Anthropic Claude, OpenAI, Groq, Ollama, OpenRouter. Switch with `MAMMOTH_PROVIDER`.
-- **Full tool suite** — Read, Write, Edit, Bash, Grep, Glob. LLM has direct filesystem and shell access.
-- **Sub-agent system** — 9 specialized agent types (explorer, executor, code-reviewer, security-reviewer, debugger, architect, designer, writer, test-engineer). Spawned by the LLM automatically.
-- **4-tier memory** — Working → Episodic → Semantic → Procedural. Learns across sessions via SQLite + FTS5.
-- **Workflow engine** — State machine with circuit breaker. Autopilot, Ralph (quality-gated), Ultrawork (parallel) modes.
-- **Slash commands** — Claude Code-compatible: `/help`, `/model`, `/doctor`, `/compact`, `/cost`, `/sessions`, `/resume`, `/config`, etc.
-- **Session persistence** — Auto-saves conversations. Resume from any point.
-- **MCP support** — Model Context Protocol for connecting external tool servers.
+* **Multi-provider** — DeepSeek, Anthropic Claude, OpenAI, Groq, Ollama, OpenRouter. Switch with `MAMMOTH_PROVIDER`.
+* **Full tool suite** — Read, Write, Edit, Bash, Grep, Glob. LLM has direct filesystem and shell access.
+* **Sub-agent system** — 9 specialized agent types (explorer, executor, code-reviewer, security-reviewer, debugger, architect, designer, writer, test-engineer). Spawned by the LLM automatically.
+* **4-tier memory** — Working → Episodic → Semantic → Procedural. Learns across sessions via SQLite + FTS5.
+* **Workflow engine** — State machine with circuit breaker. Autopilot, Ralph (quality-gated), Ultrawork (parallel) modes.
+* **Slash commands** — Claude Code-compatible: `/help`, `/model`, `/doctor`, `/compact`, `/cost`, `/sessions`, `/resume`, `/config`, etc.
+* **Session persistence** — Auto-saves conversations. Resume from any point.
+* **MCP support** — Model Context Protocol for connecting external tool servers.
 
-## Prerequisites
+## 📦 Prerequisites
 
-- [Bun](https://bun.sh) >= 1.0.0
-- An API key for at least one supported provider
+* [Bun](https://bun.sh) >= 1.0.0
+* An API key for at least one supported provider
 
-## Install
+## 🚀 Install
 
 ```bash
-# Clone
-git clone https://github.com/georgegeorge2525/mammothcli.git
+# Clone the repository
+git clone [https://github.com/georgegeorge2525/mammothcli.git](https://github.com/georgegeorge2525/mammothcli.git)
 cd mammothcli
 
 # Install dependencies
@@ -41,31 +54,35 @@ bun install
 # Set your API key
 echo 'DEEPSEEK_API_KEY=sk-...' > .env
 
-# Run
+# Run Mammoth
 bun run start
+
 ```
 
-### Global install
+### Global Install
 
 ```bash
 bun install -g .
 mammothcli
+
 ```
 
-Or place your API key at `~/.mammoth/.env` for global access.
+*Note: You can place your API key at `~/.mammoth/.env` for global access.*
 
-## Provider configuration
+## ⚙️ Provider Configuration
 
 Set `MAMMOTH_PROVIDER` to choose your LLM backend:
 
-| Provider | Env var for key | Default model |
-|----------|----------------|---------------|
-| `deepseek` (default) | `DEEPSEEK_API_KEY` | deepseek-v4-pro |
-| `claude` | `ANTHROPIC_API_KEY` | claude-sonnet-4-6 |
-| `openai` | `OPENAI_API_KEY` | gpt-4o |
-| `groq` | `GROQ_API_KEY` | llama-4-maverick-128k |
-| `ollama` | (none — local) | llama3.1 |
-| `openrouter` | `OPENROUTER_API_KEY` | openai/gpt-4o |
+| Provider | Environment Variable | Default Model |
+| --- | --- | --- |
+| `deepseek` *(default)* | `DEEPSEEK_API_KEY` | `deepseek-v4-pro` |
+| `claude` | `ANTHROPIC_API_KEY` | `claude-sonnet-4-6` |
+| `openai` | `OPENAI_API_KEY` | `gpt-4o` |
+| `groq` | `GROQ_API_KEY` | `llama-4-maverick-128k` |
+| `ollama` | *(none — local)* | `llama3.1` |
+| `openrouter` | `OPENROUTER_API_KEY` | `openai/gpt-4o` |
+
+**Examples:**
 
 ```bash
 # Use Claude
@@ -73,11 +90,12 @@ MAMMOTH_PROVIDER=claude ANTHROPIC_API_KEY=sk-ant-... mammothcli
 
 # Use local Ollama
 MAMMOTH_PROVIDER=ollama mammothcli
-```
-
-## Architecture
 
 ```
+
+## 🏗️ Architecture
+
+```text
 main-tui.tsx          Ink/React terminal UI
 MammothLoop.ts        LLM conversation engine
 AgentRunner.ts        Sub-agent spawner
@@ -98,12 +116,13 @@ providers/
   openrouterProvider.ts OpenRouter adapter
 memory/               4-tier consolidation system
 engine/               Workflow state machine + team orchestration
+
 ```
 
-## Slash commands
+## ⌨️ Slash Commands
 
 | Command | Description |
-|---------|-------------|
+| --- | --- |
 | `/help` | Show all commands |
 | `/model [name]` | Show/switch model |
 | `/clear` | Clear conversation |
@@ -118,10 +137,10 @@ engine/               Workflow state machine + team orchestration
 | `/config` | Show configuration |
 | `/exit` | Quit |
 
-## Agent types
+## 🤖 Agent Types
 
-| Agent | Tools | Use case |
-|-------|-------|----------|
+| Agent | Tools | Use Case |
+| --- | --- | --- |
 | `explore` | Read, Grep, Glob | Codebase search, research |
 | `executor` | Read, Write, Edit, Grep, Glob, Bash | Implementation |
 | `code-reviewer` | Read, Grep, Glob | Code quality review |
@@ -132,10 +151,14 @@ engine/               Workflow state machine + team orchestration
 | `writer` | Read, Write, Edit, Grep | Documentation |
 | `test-engineer` | Read, Write, Bash | Test generation |
 
-## License
+## 📄 License
 
-Apache 2.0 — see [LICENSE](LICENSE).
+Apache 2.0 — see [LICENSE](https://www.google.com/search?q=LICENSE).
 
-## Contributing
+## 🤝 Contributing
 
-See [CONTRIBUTING.md](CONTRIBUTING.md). Issues and PRs welcome.
+See [CONTRIBUTING.md](https://www.google.com/search?q=CONTRIBUTING.md). Issues and PRs are welcome!
+
+```
+
+```
