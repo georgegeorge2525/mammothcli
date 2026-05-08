@@ -152,11 +152,11 @@ engine/               Workflow state machine + team orchestration
 
 ## 📄 License
 
-Apache 2.0 — see [LICENSE](https://www.google.com/search?q=LICENSE).
+Apache 2.0 — see [LICENSE](https://github.com/georgegeorge2525/mammothcli/blob/main/LICENSE).
 
 ## 🤝 Contributing
 
-See [CONTRIBUTING.md](https://www.google.com/search?q=CONTRIBUTING.md). Issues and PRs are welcome!
+See [CONTRIBUTING.md](https://github.com/georgegeorge2525/mammothcli/blob/main/CONTRIBUTING.md). Issues and PRs are welcome!
 
 ```
 
