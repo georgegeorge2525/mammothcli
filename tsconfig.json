@@ -12,14 +12,10 @@
     "isolatedModules": true,
     "noEmit": true,
     "outDir": "dist",
-    "rootDir": ".",
     "baseUrl": ".",
-    "paths": {
-      "src/*": ["./*"]
-    },
     "allowImportingTsExtensions": true,
     "types": ["bun-types"]
   },
-  "include": ["**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules", "dist", ".mammoth", ".mammoth/state", "mammoth.txt"]
+  "include": ["src/**/*.ts", "src/**/*.tsx", "services/**/*.ts", "memory/**/*.ts", "engine/**/*.ts", "providers/**/*.ts", "contexts/**/*.ts", "types/**/*.ts", "constants/**/*.ts"],
+  "exclude": ["node_modules", "dist", ".mammoth"]
 }

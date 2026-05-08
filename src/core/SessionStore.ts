@@ -3,7 +3,7 @@
 
 import * as fs from 'node:fs'
 import * as path from 'node:path'
-import type { DSMLMessage } from './services/deepseekProtocol.js'
+import type { DSMLMessage } from '../../services/deepseekProtocol.js'
 
 export interface SessionMeta {
   id: string

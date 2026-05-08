@@ -4,7 +4,7 @@
 import * as fs from 'node:fs'
 import * as path from 'node:path'
 import { spawn, type ChildProcess } from 'node:child_process'
-import type { ToolDef } from './ToolRegistry.js'
+import type { ToolDef } from '../tools/ToolRegistry.js'
 
 export interface MCPServerConfig {
   name: string

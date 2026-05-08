@@ -2,7 +2,7 @@
 // Loads tool schemas (name, description, parameters) from the real tool files,
 // but uses lightweight executors that don't require the full AppState context.
 
-import type { DSMLToolCall } from './services/deepseekProtocol.js'
+import type { DSMLToolCall } from '../../services/deepseekProtocol.js'
 
 export interface ToolDef {
   name: string

@@ -1,9 +1,9 @@
 // AgentRunner — in-process sub-agent execution for the Mammoth TUI.
 // Spawns lightweight sub-agents that run in the same process using MammothLoop.
 
-import { MammothLoop } from './MammothLoop.js'
-import { ProviderClient } from './services/providerClient.js'
-import { ToolRegistry } from './ToolRegistry.js'
+import { MammothLoop } from './Loop.js'
+import { ProviderClient } from '../../services/providerClient.js'
+import { ToolRegistry } from '../tools/ToolRegistry.js'
 
 
 export interface AgentConfig {

@@ -3,9 +3,9 @@
 // /cost, /memory, /consolidate, /compact, /doctor, /config, /workflow, /hud
 
 import type { SessionStore } from './SessionStore.js'
-import type { MammothLoop } from './MammothLoop.js'
-import type { MemoryManager } from './memory/MemoryManager.js'
-import type { MammothEngine } from './engine/MammothEngine.js'
+import type { MammothLoop } from './Loop.js'
+import type { MemoryManager } from '../../memory/MemoryManager.js'
+import type { MammothEngine } from '../../engine/MammothEngine.js'
 
 export interface CommandResult {
   type: 'info' | 'success' | 'error' | 'list'

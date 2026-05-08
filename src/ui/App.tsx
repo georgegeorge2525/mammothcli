@@ -1,7 +1,7 @@
 ﻿import React, { useState } from 'react'
 import { Box, Text, useInput, useApp } from 'ink'
 import { MessageList } from './MessageList.js'
-import { MammothPrompt } from './MammothPrompt.js'
+import { MammothPrompt } from './Prompt.js'
 import { AgentStatus } from './AgentStatus.js'
 
 export interface MammothMessage {

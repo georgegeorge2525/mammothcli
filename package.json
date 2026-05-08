@@ -3,30 +3,18 @@
   "version": "1.0.0",
   "description": "Mammoth — sovereign AI coding assistant CLI. Ask it to code, review, debug, or build. Local-first, powered by DeepSeek-V4.",
   "type": "module",
-  "main": "main-tui.tsx",
+  "main": "src/main.tsx",
   "bin": {
-    "mammothcli": "./main-tui.tsx"
+    "mammothcli": "./src/main.tsx"
   },
   "scripts": {
-    "start": "bun run main-tui.tsx",
+    "start": "bun run src/main.tsx",
     "typecheck": "tsc --noEmit",
     "check": "tsc --noEmit --pretty",
     "prepublishOnly": "tsc --noEmit"
   },
   "files": [
-    "main-tui.tsx",
-    "MammothApp.tsx",
-    "MammothLoop.ts",
-    "MammothPrompt.tsx",
-    "MessageList.tsx",
-    "AgentStatus.tsx",
-    "AgentRunner.ts",
-    "Commands.ts",
-    "ToolRegistry.ts",
-    "PermissionManager.ts",
-    "MCPManager.ts",
-    "SessionStore.ts",
-    "system-prompt.txt",
+    "src/",
     "services/",
     "memory/",
     "engine/",

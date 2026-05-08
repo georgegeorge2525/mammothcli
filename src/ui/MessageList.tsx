@@ -1,6 +1,6 @@
 import React from 'react'
 import { Box, Text } from 'ink'
-import type { MammothMessage } from './MammothApp.js'
+import type { MammothMessage } from './App.js'
 
 const RoleColors: Record<string, string> = {
   user: '#00ff00',

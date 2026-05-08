@@ -1,9 +1,9 @@
 // MammothLoop — lightweight query engine wrapping the Mammoth API client
 
-import { ProviderClient, type StreamEvent } from './services/providerClient.js'
+import { ProviderClient, type StreamEvent } from '../../services/providerClient.js'
 // Keep old client for backward compat
-export { ProviderClient as MammothAPIClient } from './services/providerClient.js'
-import type { DSMLMessage, DSMLToolCall, DSMLToolResult } from './services/deepseekProtocol.js'
+export { ProviderClient as MammothAPIClient } from '../../services/providerClient.js'
+import type { DSMLMessage, DSMLToolCall, DSMLToolResult } from '../../services/deepseekProtocol.js'
 
 export type ToolExecutor = (name: string, args: Record<string, unknown>) => Promise<string>
 
@@ -25,7 +25,7 @@ let _cachedPrompt = ''
 export function buildSystemPrompt(cwd: string): string {
   if (!_cachedPrompt) {
     const __dirname = dirname(fileURLToPath(import.meta.url))
-    _cachedPrompt = readFileSync(join(__dirname, 'system-prompt.txt'), 'utf-8')
+    _cachedPrompt = readFileSync(join(__dirname, '..', 'system-prompt.txt'), 'utf-8')
   }
   return 'Reasoning Effort: Be thorough. Decompose problems, consider alternatives, verify assumptions.\n\n' +
     _cachedPrompt.replace('${CWD}', cwd)
