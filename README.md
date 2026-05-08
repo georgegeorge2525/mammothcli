@@ -32,7 +32,7 @@ Mammoth reads your files, writes the code, runs the tests — all in your termin
 
 ```bash
 # Clone
-git clone https://github.com/your-org/mammothcli.git
+git clone https://github.com/georgegeorge2525/mammothcli.git
 cd mammothcli
 
 # Install dependencies
